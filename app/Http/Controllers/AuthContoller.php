@@ -8,26 +8,25 @@ class AuthContoller extends Controller
 {
 
 
-     public function login(){
+    public function login()
+    {
 
         return view('login');
+    }
+
+
+    public function loginSubmit(Request $request)
+    {
+        echo $request->input('text_username');
+        echo '<br>';
+        echo $request->input('text_password');
 
     }
 
 
-     public function loginSubmit(){
-
-        echo 'login submit';
-
-    }
-
-
-     public function logout(){
+    public function logout()
+    {
 
         echo 'logout';
-
     }
-
-
-
 }
