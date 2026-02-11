@@ -9,3 +9,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', [AuthContoller::class, 'login']);
 Route::post('/loginSubmit', [AuthContoller::class, 'loginSubmit']);
 Route::get('/logout', [AuthContoller::class, 'logout']);
+

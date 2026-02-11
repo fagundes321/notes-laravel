@@ -17,9 +17,24 @@ class AuthContoller extends Controller
 
     public function loginSubmit(Request $request)
     {
-        echo $request->input('text_username');
-        echo '<br>';
-        echo $request->input('text_password');
+        // form validation
+        $request->validate([
+            'text_username' => 'required|email',
+            'text_password' => 'required|min:6|max:16'
+        ],
+        [
+            'text_username.required' => 'O username é obrigatorio',
+            'text_username.email'    => 'Username deve ser um email válido',
+            'text_password.required'  => 'A senha é obrigatorio',
+            'text_password.min'    => 'A senha deve ter pelo menos :min caracteres',
+            'text_password.max'    => 'A senha deve ter no máximo :max caracteres'
+        ]);
+
+        // get user input
+        $username = $request->input('text_username');
+        $password = $request->input('text_password');
+
+        echo 'OK!';
 
     }
 
