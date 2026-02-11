@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthContoller;
 use App\Http\Controllers\MainController;
+// use App\Http\Middleware\CheckIsLogged;
 use App\Http\Middleware\CheckIsLogged;
 use App\Http\Middleware\CheckIsNotLogged;
 use Illuminate\Support\Facades\Route;

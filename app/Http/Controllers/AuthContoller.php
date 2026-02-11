@@ -65,8 +65,8 @@ class AuthContoller extends Controller
             ]
         ]);
 
-        echo 'login foi um secesso';
-
+        // redirect to home
+        return redirect()->to('/');
     }
 
 
