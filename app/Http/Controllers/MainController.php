@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Services\Operations;
+use Illuminate\Contracts\Encryption\DecryptException;
+use Illuminate\Support\Facades\Crypt;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
 
 
-     public function index(){
+    public function index()
+    {
 
         // load user's notes
 
@@ -20,16 +24,28 @@ class MainController extends Controller
         return view('home', [
             'notes' => $notes
         ]);
-
     }
 
 
-     public function newNote(){
+    public function newNote()
+    {
 
         echo " I'm creating a new note!";
-
     }
 
 
+    public function editNote($id)
+    {
 
+        $id = Operations::decryptId($id);
+        echo "estou deletando o = $id";
+    }
+
+
+    public function deleteNote($id)
+    {
+
+        $id = Operations::decryptId($id);
+        echo "estou deletando o = $id";
+    }
 }

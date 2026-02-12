@@ -19,15 +19,11 @@
                 </div>
 
                 <!-- temp -->
-                <hr class="my-5">
+              
 
                 <!-- notes are available -->
                 @if (count($notes) == 0)
-                    <div class="d-flex justify-content-end mb-3">
-                        <a href="{{ route('new') }}" class="btn btn-secondary px-3">
-                            <i class="fa-regular fa-pen-to-square me-2"></i>New Note
-                        </a>
-                    </div>
+
                 @else
                     <!-- notes are available -->
                     <div class="d-flex justify-content-end mb-3">
