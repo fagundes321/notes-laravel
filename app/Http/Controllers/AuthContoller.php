@@ -28,9 +28,9 @@ class AuthContoller extends Controller
             [
                 'text_username.required' => 'O username é obrigatorio',
                 'text_username.email'    => 'Username deve ser um email válido',
-                'text_password.required'  => 'A senha é obrigatorio',
-                'text_password.min'    => 'A senha deve ter pelo menos :min caracteres',
-                'text_password.max'    => 'A senha deve ter no máximo :max caracteres'
+                'text_password.required'  => 'A Password é obrigatorio',
+                'text_password.min'    => 'A Password deve ter pelo menos :min caracteres',
+                'text_password.max'    => 'A Password deve ter no máximo :max caracteres'
             ]
 
 
